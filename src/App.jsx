@@ -5,11 +5,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Beranda from './screens/Beranda';
+import Saya from './screens/Saya';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
-const Bar = () => {
+const MenuTab = () => {
   return (
     <Tab.Navigator screenOptions={{tabBarActiveTintColor: 'orange'}}>
       <Tab.Screen 
@@ -21,44 +22,30 @@ const Bar = () => {
         ),
       }}
   />
+    <Tab.Screen 
+      name="Saya" 
+      component={Saya}
+      options={{
+         tabBarIcon: ({ color, size }) => (
+          <MaterialCommunityIcons name="home" color={color} size={size} />
+        ),
+      }}
+    />
   </Tab.Navigator>
   );
 };
 
 /**pindah posisii */
-const App = ()=> {
+function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Beranda" component={Malin_Kundang} />
-        <Stack.Screen name="Danau Toba" component={Danau_Toba} />
+        <Stack.Screen name="Tab" component={MenuTab} options={{headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>
-  );
-}
-const Malin_Kundang = ({navigation}) => {
-  return (
-    <View>
-      <Text style={styles.Malin_Kundang}>Malin Kundang</Text>
-      <Button 
-      title='danau toba'
-      onPress={()=>navigation.navigate('Danau Toba')}/>
-    </View>
-  );
-};
-
-const Danau_Toba = () => {
-  return (
-    <View>
-      <Text style={styles.Danau_Toba}>Danau toba</Text>
-    </View>
   );
 };
 
 export default App;
 
-const styles = StyleSheet.create({
-  Malin_Kundang: {
-    fontSize: 100,
-  }
-});
+const styles = StyleSheet.create({});
