@@ -10,17 +10,17 @@ const Stack = createNativeStackNavigator();
 const Beranda = ({navigation}) => {
   return (
     <View>
-      <Atas/>
       <ScrollView>
+      <Atas/>
       <Malin_Kundang/>
       <Danau_Toba />
       {/* <Cerita/> */}
-      </ScrollView>
       <TouchableOpacity 
       onPress={() => navigation.navigate('Saya')}
       style={styles.btn}>
       <Text style={styles.bb}>SAYA</Text>
-      </TouchableOpacity>        
+      </TouchableOpacity>  
+      </ScrollView>      
     </View>
   );
 };
@@ -52,7 +52,7 @@ const Atas = () => {
   )
 }
 
-const Malin_Kundang = ({navigation}) => {
+const Malin_Kundang = () => {
   return (
     <View style = {{
       marginLeft: 65, 
@@ -86,7 +86,7 @@ const Malin_Kundang = ({navigation}) => {
   )
 }
 
-const Danau_Toba = () => {
+const Danau_Toba = (onPress) => {
   return (
     <View style = {{
       marginLeft: 65, 
@@ -105,12 +105,13 @@ const Danau_Toba = () => {
         width:250, 
         justifyContent: 'center', 
         borderRadius: 10}}>
-        <Text style = {{
+          <Text 
+          style = {{
           fontSize: 16,
           fontWeight: 'bold',
           color: 'white',
           fontStyle: 'italic',
-        }}> Baca </Text>
+        }}> Baca </Text>       
       </View>
       
     </View>
