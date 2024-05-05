@@ -1,7 +1,11 @@
-import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Button, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import MalinKundang from '../assets/MalinKundang.jpg';
 import danautoba from '../assets/danautoba.jpeg';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
 
 const Beranda = ({navigation}) => {
   return (
@@ -10,6 +14,7 @@ const Beranda = ({navigation}) => {
       <ScrollView>
       <Malin_Kundang/>
       <Danau_Toba />
+      {/* <Cerita/> */}
       </ScrollView>
       <TouchableOpacity 
       onPress={() => navigation.navigate('Saya')}
@@ -20,6 +25,25 @@ const Beranda = ({navigation}) => {
   );
 };
 
+// const Cerita = () => {
+//   return (
+//     <View>
+//       <NavigationContainer>
+//         <Stack.Navigator>
+//           <Stack.Screen 
+//           name='malin'
+//           component={Malin_Kundang}
+//           options={{title: "Malin Kundang"}} />
+//           <Stack.Screen 
+//           name='toba'
+//           component={Danau_Toba}
+//           options={{title: "Danau Toba"}} />
+//         </Stack.Navigator>
+//       </NavigationContainer>
+//     </View>
+//   );
+// }
+
 const Atas = () => {
   return (
     <View style={styles.welcome}>
@@ -28,7 +52,7 @@ const Atas = () => {
   )
 }
 
-const Malin_Kundang = () => {
+const Malin_Kundang = ({navigation}) => {
   return (
     <View style = {{
       marginLeft: 65, 
@@ -47,12 +71,15 @@ const Malin_Kundang = () => {
         width:250, 
         justifyContent: 'center', 
         borderRadius: 10}}>
-        <Text style = {{
+          <Text style = {{
           fontSize: 16,
           fontWeight: 'bold',
           color: 'white',
           fontStyle: 'italic',
-        }}>Baca</Text>
+        }}> Baca </Text>
+        {/* <Button 
+        title = 'Malin Kundang'
+        onPress={() => navigation.navigate('malin')}/> */}
       </View>
       
     </View>
