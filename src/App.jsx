@@ -6,6 +6,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Beranda from './screens/Beranda';
 import Saya from './screens/Saya';
+import Tentang from './screens/Tentang';
+import Daftar from './screens/Daftar';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -23,11 +25,20 @@ const MenuTab = () => {
       }}
   />
     <Tab.Screen 
+      name="Daftar" 
+      component={Daftar}
+      options={{
+         tabBarIcon: ({ color, size }) => (
+          <MaterialCommunityIcons name="playlist-edit" color={color} size={size} />
+        ),
+      }}
+  />
+    <Tab.Screen 
       name="Saya" 
       component={Saya}
       options={{
          tabBarIcon: ({ color, size }) => (
-          <MaterialCommunityIcons name="user" color={color} size={size} />
+          <MaterialCommunityIcons name="account" color={color} size={size} />
         ),
       }}
     />
@@ -41,6 +52,7 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Tab" component={MenuTab} options={{headerShown: false}} />
+        <Stack.Screen name='Tentang' component={Tentang} />
       </Stack.Navigator>
     </NavigationContainer>
   );

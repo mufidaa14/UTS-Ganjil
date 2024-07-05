@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Beranda = () => {
+const MalinKundang = () => {
   return (
     <View>
-      <Text>Beranda</Text>
+      <Text>MalinKundang</Text>
     </View>
   )
 }
 
-export default Beranda
+export default MalinKundang
 
 const styles = StyleSheet.create({})
