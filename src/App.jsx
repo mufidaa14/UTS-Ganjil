@@ -8,6 +8,8 @@ import Beranda from './screens/Beranda';
 import Saya from './screens/Saya';
 import Tentang from './screens/Tentang';
 import Daftar from './screens/Daftar';
+import MalinKundang from './screens/MalinKundang';
+import DanauToba from './screens/DanauToba';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -40,6 +42,7 @@ const MenuTab = () => {
          tabBarIcon: ({ color, size }) => (
           <MaterialCommunityIcons name="account" color={color} size={size} />
         ),
+        headerShown: false,
       }}
     />
   </Tab.Navigator>
@@ -53,6 +56,8 @@ function App() {
       <Stack.Navigator>
         <Stack.Screen name="Tab" component={MenuTab} options={{headerShown: false}} />
         <Stack.Screen name='Tentang' component={Tentang} />
+        <Stack.Screen name='MalinKundang' component={MalinKundang} />
+        <Stack.Screen name='DanauToba' component={DanauToba} />
       </Stack.Navigator>
     </NavigationContainer>
   );

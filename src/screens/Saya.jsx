@@ -27,6 +27,14 @@ const Saya = () => {
         <Image source={whatsapp} style={styles.wtsp} />
         <Text style={{marginLeft: 20, fontSize: 17, fontWeight: 'bold', color:'black'}}>082331270662</Text>
       </View>
+      <Footer />
+    </View>
+  )
+}
+const Footer = () => {
+  return (
+    <View style={styles.footer}>
+      <Text style={styles.footerText}>Copyright By Fidaa 2024</Text>
     </View>
   )
 }
@@ -36,7 +44,7 @@ export default Saya;
 const styles = StyleSheet.create({
   profil: {
     backgroundColor: 'orange',
-    height: 230,
+    height: 330,
     alignItems: 'center',
   },
   txt: {
@@ -47,10 +55,10 @@ const styles = StyleSheet.create({
   ft: {
     height: 80,
     width: 80,
-    marginTop: 50,
+    marginTop: 80,
   },
   bagian1: {
-    marginTop: 150,
+    marginTop: 190,
     width: 300,
     alignItems: 'center',
     justifyContent:'center',
@@ -95,5 +103,20 @@ const styles = StyleSheet.create({
   wtsp: {
     height: 40,
     width:40,
+  },
+  footer: {
+    backgroundColor: 'black',
+    padding: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: 100,
+    width:500,
+    
+  },
+  footerText: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    color: 'white',
+    fontStyle: 'italic',
   },
 });

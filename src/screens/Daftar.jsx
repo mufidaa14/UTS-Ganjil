@@ -17,41 +17,20 @@ const Beranda = ({navigation}) => {
     <View>
       <ScrollView>
       <Atas/>
-      <Malin_Kundang onPress={navigation.navigate('Saya')}/>
-      <Danau_Toba onPress={navigation.navigate('Tentang')}/>
+      <Malin_Kundang onPress={navigation.navigate('MalinKundang')}/>
+      <Danau_Toba onPress={navigation.navigate('DanauToba')}/>
       <Kancil_dan_Buaya onPress={navigation.navigate('Saya')}/>
       <Roro_Jonggrang onPress={navigation.navigate('Saya')}/>
       <Sangkuriang onPress={navigation.navigate('Saya')}/>
       <Timun_Mas onPress={navigation.navigate('Saya')}/>
       <Lutung_Kasarung onPress={navigation.navigate('Saya')}/>
-      <TouchableOpacity 
-      onPress={() => navigation.navigate('Tentang')}
-      style={styles.btn}>
-      <Text style={styles.bb}>SAYA</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('Tentang')} style={styles.btn}>
+        <Text style={styles.bb}>SAYA</Text>
       </TouchableOpacity>  
       </ScrollView>      
     </View>
   );
 };
-
-// const Cerita = () => {
-//   return (
-//     <View>
-//       <NavigationContainer>
-//         <Stack.Navigator>
-//           <Stack.Screen 
-//           name='malin'
-//           component={Malin_Kundang}
-//           options={{title: "Malin Kundang"}} />
-//           <Stack.Screen 
-//           name='toba'
-//           component={Danau_Toba}
-//           options={{title: "Danau Toba"}} />
-//         </Stack.Navigator>
-//       </NavigationContainer>
-//     </View>
-//   );
-// }
 
 const Atas = () => {
   return (
@@ -71,6 +50,7 @@ const Malin_Kundang = ({onPress}) => {
       borderRadius: 8}}>
       <Image source={MalinKundang} style={styles.img}/>
       <Text style={styles.mln}>Malin Kundang</Text>
+      <TouchableOpacity onPress={onPress}>            
       <View style = {{
         backgroundColor: '#FF8C00', 
         paddingTop: 8, paddingBottom: 8, 
@@ -80,18 +60,14 @@ const Malin_Kundang = ({onPress}) => {
         width:250, 
         justifyContent: 'center', 
         borderRadius: 10}}>
-          <TouchableOpacity onPress={onPress}>            
             <Text style = {{
             fontSize: 16,
             fontWeight: 'bold',
             color: 'white',
             fontStyle: 'italic',
             }}> Baca </Text>
-          </TouchableOpacity>
-        {/* <Button 
-        title = 'Malin Kundang'
-        onPress={() => navigation.navigate('malin')}/> */}
       </View>
+        </TouchableOpacity>
       
     </View>
   )
