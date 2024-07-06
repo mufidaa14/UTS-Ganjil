@@ -12,18 +12,101 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
 
-const Beranda = ({navigation}) => {
+const Daftar = ({navigation}) => {
   return (
     <View>
       <ScrollView>
       <Atas/>
-      <Malin_Kundang onPress={navigation.navigate('MalinKundang')}/>
-      <Danau_Toba onPress={navigation.navigate('DanauToba')}/>
-      <Kancil_dan_Buaya onPress={navigation.navigate('Saya')}/>
-      <Roro_Jonggrang onPress={navigation.navigate('Saya')}/>
-      <Sangkuriang onPress={navigation.navigate('Saya')}/>
-      <Timun_Mas onPress={navigation.navigate('Saya')}/>
-      <Lutung_Kasarung onPress={navigation.navigate('Saya')}/>
+      <View style = {{
+        marginLeft: 65, 
+        marginTop: 30, 
+        backgroundColor:'#c2c2c2', 
+        width: 300, 
+        borderRadius: 8}}>
+      <Image source={MalinKundang} style={styles.img}/>
+      <Text style={styles.mln}>Malin Kundang</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('Malin Kundang')} style={styles.btn}>
+        <Text style={styles.bb}>Mulai Membaca</Text>
+      </TouchableOpacity>    
+      </View>
+      {/* Danau Toba */}
+      <View style = {{
+        marginLeft: 65, 
+        marginTop: 30, 
+        backgroundColor:'#c2c2c2', 
+        width: 300, 
+        borderRadius: 8,}}>
+      <Image source = {danautoba} style = {styles.dntb}/>
+      <Text style = {styles.danau}>Danau Toba</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('Danau Toba')} style={styles.btn}>
+        <Text style={styles.bb}>Mulai Membaca</Text>
+      </TouchableOpacity> 
+      </View>
+      {/* Kancil dan Buaya */}
+      <View style = {{
+        marginLeft: 65, 
+        marginTop: 30, 
+        backgroundColor:'#c2c2c2', 
+        width: 300, 
+        borderRadius: 8,}}>
+      <Image source = {kancil} style = {styles.kncl}/>
+      <Text style = {styles.kancil}>Kancil dan Buaya</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('Kancil dan Buaya')} style={styles.btn}>
+        <Text style={styles.bb}>Mulai Membaca</Text>
+      </TouchableOpacity> 
+      </View>
+      {/* RORO JONGGRANG */}
+      <View style = {{
+        marginLeft: 65, 
+        marginTop: 30, 
+        backgroundColor:'#c2c2c2', 
+        width: 300, 
+        borderRadius: 8,}}>
+      <Image source = {roro} style = {styles.rr}/>
+      <Text style = {styles.roro}>Roro Jonggrang</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('Roro Jonggrang')} style={styles.btn}>
+        <Text style={styles.bb}>Mulai Membaca</Text>
+      </TouchableOpacity> 
+      </View>
+      {/* SANGKURIANG */}
+      <View style = {{
+        marginLeft: 65, 
+        marginTop: 30, 
+        backgroundColor:'#c2c2c2', 
+        width: 300, 
+        borderRadius: 8,}}>
+      <Image source = {sangkuriang} style = {styles.sngk}/>
+      <Text style = {styles.sangkuriang}>Sangkuriang</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('Sangkuriang')} style={styles.btn}>
+        <Text style={styles.bb}>Mulai Membaca</Text>
+      </TouchableOpacity> 
+      </View>
+      {/* TIMUN MAS */}
+      <View style = {{
+        marginLeft: 65, 
+        marginTop: 30, 
+        backgroundColor:'#c2c2c2', 
+        width: 300, 
+        borderRadius: 8,}}>
+      <Image source = {timun_mas} style = {styles.tmn}/>
+      <Text style = {styles.timun}>Timun Mas</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('Timun Mas')} style={styles.btn}>
+        <Text style={styles.bb}>Mulai Membaca</Text>
+      </TouchableOpacity> 
+      </View>
+      {/* LUTUNG KASARUNG */}
+      <View style = {{
+        marginLeft: 65, 
+        marginTop: 30, 
+        backgroundColor:'#c2c2c2', 
+        width: 300, 
+        borderRadius: 8,}}>
+      <Image source = {lutung} style = {styles.ltg}/>
+      <Text style = {styles.lutung}>Lutung Kasarung</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('Lutung Kasarung')} style={styles.btn}>
+        <Text style={styles.bb}>Mulai Membaca</Text>
+      </TouchableOpacity> 
+      </View>
       <TouchableOpacity onPress={() => navigation.navigate('Tentang')} style={styles.btn}>
         <Text style={styles.bb}>SAYA</Text>
       </TouchableOpacity>  
@@ -40,244 +123,7 @@ const Atas = () => {
   )
 }
 
-const Malin_Kundang = ({onPress}) => {
-  return (
-    <View style = {{
-      marginLeft: 65, 
-      marginTop: 30, 
-      backgroundColor:'#c2c2c2', 
-      width: 300, 
-      borderRadius: 8}}>
-      <Image source={MalinKundang} style={styles.img}/>
-      <Text style={styles.mln}>Malin Kundang</Text>
-      <TouchableOpacity onPress={onPress}>            
-      <View style = {{
-        backgroundColor: '#FF8C00', 
-        paddingTop: 8, paddingBottom: 8, 
-        alignItems: 'center', 
-        marginBottom: 20, 
-        marginLeft:26, 
-        width:250, 
-        justifyContent: 'center', 
-        borderRadius: 10}}>
-            <Text style = {{
-            fontSize: 16,
-            fontWeight: 'bold',
-            color: 'white',
-            fontStyle: 'italic',
-            }}> Baca </Text>
-      </View>
-        </TouchableOpacity>
-      
-    </View>
-  )
-}
-
-const Danau_Toba = (onPress) => {
-  return (
-    <View style = {{
-      marginLeft: 65, 
-      marginTop: 30, 
-      backgroundColor:'#c2c2c2', 
-      width: 300, 
-      borderRadius: 8,}}>
-      <TouchableOpacity onPress={onPress}>
-        <Image source = {danautoba} style = {styles.dntb}/>
-      </TouchableOpacity>
-      <Text style = {styles.danau}>Danau Toba</Text>
-      <View style = {{
-        backgroundColor: '#FF8C00', 
-        paddingTop: 8, paddingBottom: 8, 
-        alignItems: 'center', 
-        marginBottom: 20, 
-        marginLeft:26, 
-        width:250, 
-        justifyContent: 'center', 
-        borderRadius: 10}}>
-          <Text 
-          style = {{
-          fontSize: 16,
-          fontWeight: 'bold',
-          color: 'white',
-          fontStyle: 'italic',
-        }}> Baca </Text>       
-      </View>
-      
-    </View>
-  )
-}
-
-const Kancil_dan_Buaya = (onPress) => {
-    return (
-      <View style = {{
-        marginLeft: 65, 
-        marginTop: 30, 
-        backgroundColor:'#c2c2c2', 
-        width: 300, 
-        borderRadius: 8,}}>
-        <TouchableOpacity onPress={onPress}>
-          <Image source = {kancil} style = {styles.kncl}/>
-        </TouchableOpacity>
-        <Text style = {styles.kancil}>Danau Toba</Text>
-        <View style = {{
-          backgroundColor: '#FF8C00', 
-          paddingTop: 8, paddingBottom: 8, 
-          alignItems: 'center', 
-          marginBottom: 20, 
-          marginLeft:26, 
-          width:250, 
-          justifyContent: 'center', 
-          borderRadius: 10}}>
-            <Text 
-            style = {{
-            fontSize: 16,
-            fontWeight: 'bold',
-            color: 'white',
-            fontStyle: 'italic',
-          }}> Baca </Text>       
-        </View>
-        
-      </View>
-    )
-  }
-
-  const Roro_Jonggrang = (onPress) => {
-    return (
-      <View style = {{
-        marginLeft: 65, 
-        marginTop: 30, 
-        backgroundColor:'#c2c2c2', 
-        width: 300, 
-        borderRadius: 8,}}>
-        <TouchableOpacity onPress={onPress}>
-          <Image source = {roro} style = {styles.rr}/>
-        </TouchableOpacity>
-        <Text style = {styles.roro}>Roro Jonggrang</Text>
-        <View style = {{
-          backgroundColor: '#FF8C00', 
-          paddingTop: 8, paddingBottom: 8, 
-          alignItems: 'center', 
-          marginBottom: 20, 
-          marginLeft:26, 
-          width:250, 
-          justifyContent: 'center', 
-          borderRadius: 10}}>
-            <Text 
-            style = {{
-            fontSize: 16,
-            fontWeight: 'bold',
-            color: 'white',
-            fontStyle: 'italic',
-          }}> Baca </Text>       
-        </View>
-        
-      </View>
-    )
-  }
-
-  const Sangkuriang = (onPress) => {
-    return (
-      <View style = {{
-        marginLeft: 65, 
-        marginTop: 30, 
-        backgroundColor:'#c2c2c2', 
-        width: 300, 
-        borderRadius: 8,}}>
-        <TouchableOpacity onPress={onPress}>
-          <Image source = {sangkuriang} style = {styles.sngk}/>
-        </TouchableOpacity>
-        <Text style = {styles.sangkuriang}>Sangkuriang</Text>
-        <View style = {{
-          backgroundColor: '#FF8C00', 
-          paddingTop: 8, paddingBottom: 8, 
-          alignItems: 'center', 
-          marginBottom: 20, 
-          marginLeft:26, 
-          width:250, 
-          justifyContent: 'center', 
-          borderRadius: 10}}>
-            <Text 
-            style = {{
-            fontSize: 16,
-            fontWeight: 'bold',
-            color: 'white',
-            fontStyle: 'italic',
-          }}> Baca </Text>       
-        </View>
-        
-      </View>
-    )
-  }
-
-  const Timun_Mas = (onPress) => {
-    return (
-      <View style = {{
-        marginLeft: 65, 
-        marginTop: 30, 
-        backgroundColor:'#c2c2c2', 
-        width: 300, 
-        borderRadius: 8,}}>
-        <TouchableOpacity onPress={onPress}>
-          <Image source = {timun_mas} style = {styles.tmn}/>
-        </TouchableOpacity>
-        <Text style = {styles.timun}>Timun Mas</Text>
-        <View style = {{
-          backgroundColor: '#FF8C00', 
-          paddingTop: 8, paddingBottom: 8, 
-          alignItems: 'center', 
-          marginBottom: 20, 
-          marginLeft:26, 
-          width:250, 
-          justifyContent: 'center', 
-          borderRadius: 10}}>
-            <Text 
-            style = {{
-            fontSize: 16,
-            fontWeight: 'bold',
-            color: 'white',
-            fontStyle: 'italic',
-          }}> Baca </Text>       
-        </View>
-        
-      </View>
-    )
-  }
-
-  const Lutung_Kasarung = (onPress) => {
-    return (
-      <View style = {{
-        marginLeft: 65, 
-        marginTop: 30, 
-        backgroundColor:'#c2c2c2', 
-        width: 300, 
-        borderRadius: 8,}}>
-        <TouchableOpacity onPress={onPress}>
-          <Image source = {lutung} style = {styles.ltg}/>
-        </TouchableOpacity>
-        <Text style = {styles.lutung}>Lutung Kasarung</Text>
-        <View style = {{
-          backgroundColor: '#FF8C00', 
-          paddingTop: 8, paddingBottom: 8, 
-          alignItems: 'center', 
-          marginBottom: 20, 
-          marginLeft:26, 
-          width:250, 
-          justifyContent: 'center', 
-          borderRadius: 10}}>
-            <Text 
-            style = {{
-            fontSize: 16,
-            fontWeight: 'bold',
-            color: 'white',
-            fontStyle: 'italic',
-          }}> Baca </Text>       
-        </View>
-        
-      </View>
-    )
-  }
-
-export default Beranda;
+export default Daftar;
 
 const styles = StyleSheet.create({
   btn: {

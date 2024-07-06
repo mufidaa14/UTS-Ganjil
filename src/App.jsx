@@ -10,6 +10,15 @@ import Tentang from './screens/Tentang';
 import Daftar from './screens/Daftar';
 import MalinKundang from './screens/MalinKundang';
 import DanauToba from './screens/DanauToba';
+import KancildanBuaya from './screens/Kancil_dan_Buaya';
+import RoroJonggrang from './screens/Roro_Jonggrang';
+import Sangkuriang from './screens/Sangkuriang';
+import TimunMas from './screens/Timun_Mas';
+import LutungKasarung from './screens/Lutung_Kasarung';
+import Kancil_dan_Buaya from './screens/Kancil_dan_Buaya';
+import Timun_Mas from './screens/Timun_Mas';
+import Roro_Jonggrang from './screens/Roro_Jonggrang';
+import Lutung_Kasarung from './screens/Lutung_Kasarung';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -55,8 +64,13 @@ function App() {
       <Stack.Navigator>
         <Stack.Screen name="Tab" component={MenuTab} options={{headerShown: false}} />
         <Stack.Screen name='Tentang' component={Tentang} />
-        <Stack.Screen name='MalinKundang' component={MalinKundang} />
-        <Stack.Screen name='DanauToba' component={DanauToba} />
+        <Stack.Screen name='Malin Kundang' component={MalinKundang} />
+        <Stack.Screen name='Danau Toba' component={DanauToba} />
+        <Stack.Screen name='Kancil dan Buaya' component={Kancil_dan_Buaya} />
+        <Stack.Screen name='Roro Jonggrang' component={Roro_Jonggrang} />
+        <Stack.Screen name='Sangkuriang' component={Sangkuriang} />
+        <Stack.Screen name='Timun Mas' component={Timun_Mas} />
+        <Stack.Screen name='Lutung Kasarung' component={Lutung_Kasarung} />
       </Stack.Navigator>
     </NavigationContainer>
   );
