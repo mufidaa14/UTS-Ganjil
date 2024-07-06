@@ -40,8 +40,7 @@ const MenuTab = () => {
       component={Saya}
       options={{
          tabBarIcon: ({ color, size }) => (
-          <MaterialCommunityIcons name="account" color={color} size={size} />
-        ),
+          <MaterialCommunityIcons name="account" color={color} size={size} />),
         headerShown: false,
       }}
     />
