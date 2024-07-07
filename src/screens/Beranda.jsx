@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     color: '#000', 
     marginLeft: 5, 
-    marginTop: 5,
+    marginTop: 20,
     marginRight: 20,
   },
   btn: {
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     backgroundColor: 'orange',
     alignItems: 'center',
-    marginTop: 70,
+    marginTop: 55,
     height: 50,
   },
   bb: {

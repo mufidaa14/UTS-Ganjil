@@ -16,116 +16,125 @@ const Daftar = ({navigation}) => {
   return (
     <View>
       <ScrollView>
-      <Atas/>
-      <View style = {{
-        marginLeft: 65, 
+      <View style={styles.container1}>
+      <View style = {{ 
         marginTop: 30, 
         backgroundColor:'#c2c2c2', 
-        width: 300, 
+        width: 170,
+        height: 160,
         borderRadius: 8}}>
       <Image source={MalinKundang} style={styles.img}/>
       <Text style={styles.mln}>Malin Kundang</Text>
       <TouchableOpacity onPress={() => navigation.navigate('Malin Kundang')} style={styles.btn}>
-        <Text style={styles.bb}>Mulai Membaca</Text>
+        <Text style={styles.bb}>BACA</Text>
       </TouchableOpacity>    
       </View>
       {/* Danau Toba */}
       <View style = {{
-        marginLeft: 65, 
+        marginLeft: 50, 
         marginTop: 30, 
         backgroundColor:'#c2c2c2', 
-        width: 300, 
-        borderRadius: 8,}}>
+        width: 170,
+        height: 160,
+        borderRadius: 8}}>
       <Image source = {danautoba} style = {styles.dntb}/>
       <Text style = {styles.danau}>Danau Toba</Text>
       <TouchableOpacity onPress={() => navigation.navigate('Danau Toba')} style={styles.btn}>
-        <Text style={styles.bb}>Mulai Membaca</Text>
+        <Text style={styles.bb}>BACA</Text>
       </TouchableOpacity> 
       </View>
+      </View>
+      {/* ======================================================================= */}
       {/* Kancil dan Buaya */}
+      <View style={styles.container1}>
       <View style = {{
-        marginLeft: 65, 
         marginTop: 30, 
         backgroundColor:'#c2c2c2', 
-        width: 300, 
-        borderRadius: 8,}}>
+        width: 170,
+        height: 160,
+        borderRadius: 8}}>
       <Image source = {kancil} style = {styles.kncl}/>
       <Text style = {styles.kancil}>Kancil dan Buaya</Text>
       <TouchableOpacity onPress={() => navigation.navigate('Kancil dan Buaya')} style={styles.btn}>
-        <Text style={styles.bb}>Mulai Membaca</Text>
+        <Text style={styles.bb}>BACA</Text>
       </TouchableOpacity> 
       </View>
       {/* RORO JONGGRANG */}
       <View style = {{
-        marginLeft: 65, 
+        marginLeft: 50, 
         marginTop: 30, 
         backgroundColor:'#c2c2c2', 
-        width: 300, 
-        borderRadius: 8,}}>
+        width: 170,
+        height: 160,
+        borderRadius: 8}}>
       <Image source = {roro} style = {styles.rr}/>
       <Text style = {styles.roro}>Roro Jonggrang</Text>
       <TouchableOpacity onPress={() => navigation.navigate('Roro Jonggrang')} style={styles.btn}>
-        <Text style={styles.bb}>Mulai Membaca</Text>
+        <Text style={styles.bb}>BACA</Text>
       </TouchableOpacity> 
       </View>
+      </View>
+      {/* ======================================================================= */}
       {/* SANGKURIANG */}
+      <View style={styles.container1}>
       <View style = {{
-        marginLeft: 65, 
         marginTop: 30, 
         backgroundColor:'#c2c2c2', 
-        width: 300, 
-        borderRadius: 8,}}>
+        width: 170,
+        height: 160,
+        borderRadius: 8}}>
       <Image source = {sangkuriang} style = {styles.sngk}/>
       <Text style = {styles.sangkuriang}>Sangkuriang</Text>
       <TouchableOpacity onPress={() => navigation.navigate('Sangkuriang')} style={styles.btn}>
-        <Text style={styles.bb}>Mulai Membaca</Text>
+        <Text style={styles.bb}>BACA</Text>
       </TouchableOpacity> 
       </View>
       {/* TIMUN MAS */}
       <View style = {{
-        marginLeft: 65, 
+        marginLeft: 50, 
         marginTop: 30, 
         backgroundColor:'#c2c2c2', 
-        width: 300, 
-        borderRadius: 8,}}>
+        width: 170,
+        height: 160,
+        borderRadius: 8}}>
       <Image source = {timun_mas} style = {styles.tmn}/>
       <Text style = {styles.timun}>Timun Mas</Text>
       <TouchableOpacity onPress={() => navigation.navigate('Timun Mas')} style={styles.btn}>
-        <Text style={styles.bb}>Mulai Membaca</Text>
+        <Text style={styles.bb}>BACA</Text>
       </TouchableOpacity> 
       </View>
+      </View>
+      {/* ======================================================================= */}
       {/* LUTUNG KASARUNG */}
+      <View style={styles.container1}>
+
       <View style = {{
-        marginLeft: 65, 
         marginTop: 30, 
         backgroundColor:'#c2c2c2', 
-        width: 300, 
-        borderRadius: 8,}}>
+        width: 170,
+        height: 160,
+        borderRadius: 8}}>
       <Image source = {lutung} style = {styles.ltg}/>
       <Text style = {styles.lutung}>Lutung Kasarung</Text>
       <TouchableOpacity onPress={() => navigation.navigate('Lutung Kasarung')} style={styles.btn}>
-        <Text style={styles.bb}>Mulai Membaca</Text>
+        <Text style={styles.bb}>BACA</Text>
       </TouchableOpacity> 
+      </View> 
       </View>
-      <TouchableOpacity onPress={() => navigation.navigate('Tentang')} style={styles.btn}>
-        <Text style={styles.bb}>SAYA</Text>
-      </TouchableOpacity>  
       </ScrollView>      
     </View>
   );
 };
 
-const Atas = () => {
-  return (
-    <View style={styles.welcome}>
-      <Text style={styles.atas}>Selamat Membaca</Text>
-    </View>
-  )
-}
-
 export default Daftar;
 
 const styles = StyleSheet.create({
+  container1: {
+    marginBottom: 50,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+  },
   btn: {
     margin: 10,
     padding: 10,
@@ -140,53 +149,53 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   img: {
-    width: 270,
-    height: 150,
-    marginTop: 30,
-    // marginLeft: 70,
-    margin: 15,
+    width: 150,
+    height: 100,
+    marginTop: 10,
+    marginLeft: 10,
+    margin: 10,
   },
   dntb: {
-    width: 270,
-    height: 150,
-    marginTop: 30,
-    // marginLeft: 70,
-    margin: 15,
+    width: 150,
+    height: 100,
+    marginTop: 10,
+    marginLeft: 10,
+    margin: 10,
   },
   kncl: {
-    width: 270,
-    height: 150,
-    marginTop: 30,
-    // marginLeft: 70,
-    margin: 15,
+    width: 150,
+    height: 100,
+    marginTop: 10,
+    marginLeft: 10,
+    margin: 10,
   },
   rr: {
-    width: 270,
-    height: 150,
-    marginTop: 30,
-    // marginLeft: 70,
-    margin: 15,
+    width: 150,
+    height: 100,
+    marginTop: 10,
+    marginLeft: 10,
+    margin: 10,
   },
   sngk: {
-    width: 270,
-    height: 150,
-    marginTop: 30,
-    // marginLeft: 70,
-    margin: 15,
+    width: 150,
+    height: 100,
+    marginTop: 10,
+    marginLeft: 10,
+    margin: 10,
   },
   tmn: {
-    width: 270,
-    height: 150,
-    marginTop: 30,
-    // marginLeft: 70,
-    margin: 15,
+    width: 150,
+    height: 100,
+    marginTop: 10,
+    marginLeft: 10,
+    margin: 10,
   },
   ltg: {
-    width: 270,
-    height: 150,
-    marginTop: 30,
-    // marginLeft: 70,
-    margin: 15,
+    width: 150,
+    height: 100,
+    marginTop: 10,
+    marginLeft: 10,
+    margin: 10,
   },
   welcome:{
     height: 70,
@@ -200,52 +209,38 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   mln: {
-    marginTop: 10,
-    marginBottom: 15,
-    marginLeft: 100,
-    fontSize: 17,
+    marginLeft: 37,
+    fontSize: 15,
     fontWeight: 'bold',
   },
   danau: {
-    marginTop: 10,
-    marginBottom: 15,
-    marginLeft: 100,
-    fontSize: 17,
+    marginLeft: 50,
+    fontSize: 15,
     fontWeight: 'bold',
   },
   kancil: {
-    marginTop: 10,
-    marginBottom: 15,
-    marginLeft: 100,
-    fontSize: 17,
+    marginLeft: 32,
+    fontSize: 15,
     fontWeight: 'bold',
   },
   roro: {
-    marginTop: 10,
-    marginBottom: 15,
-    marginLeft: 100,
-    fontSize: 17,
+    marginLeft: 37,
+    fontSize: 15,
     fontWeight: 'bold',
   },
   sangkuriang: {
-    marginTop: 10,
-    marginBottom: 15,
-    marginLeft: 100,
-    fontSize: 17,
+    marginLeft: 42,
+    fontSize: 15,
     fontWeight: 'bold',
   },
   timun: {
-    marginTop: 10,
-    marginBottom: 15,
-    marginLeft: 100,
-    fontSize: 17,
+    marginLeft: 50,
+    fontSize: 15,
     fontWeight: 'bold',
   },
   lutung: {
-    marginTop: 10,
-    marginBottom: 15,
-    marginLeft: 100,
-    fontSize: 17,
+    marginLeft: 30,
+    fontSize: 15,
     fontWeight: 'bold',
   }
 });
