@@ -93,6 +93,10 @@ const MalinKundang = () => {
         Pelajaran utama yang terkandung di dalam cerita Malin Kundang adalah seorang anak harus selalu menghormati orang tua yang telah membesarkannya. Selain itu, pelajaran lain yang dapat dipetik adalah kita harus selalu rendah hati dan tidak sombong dengan segala kesuksesan yang sudah diraih.
       </i>
       </Text>
+      <Text style={styles.sumber}><i>
+        Sumber: https://indonesiakaya.com/pustaka-indonesia/cerita-rakyat-sumatra-barat-legenda-malin-kundang/
+      </i>
+      </Text>
     </ScrollView>
   );
 };
@@ -125,5 +129,10 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     textAlign: 'justify',
     lineHeight: 24,
+  },
+  sumber: {
+    fontSize: 14,
+    lineHeight: 24,
+    marginBottom: 8,
   },
 });
