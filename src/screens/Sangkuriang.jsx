@@ -2,8 +2,11 @@ import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import React from 'react';
 import sangkuriang from '../assets/sangkuriang.jpg';
 import sangkuriang1 from '../assets/sangkuriang1.jpg';
-import sangkuriang3 from '../assets/sangkuriang1.jpg';
+import sangkuriang3 from '../assets/sangkuriang3.jpg';
 import sangkuriang4 from '../assets/sangkuriang4.jpg';
+import sangkuriang5 from '../assets/sangkuriang5.jpg';
+import sangkuriang6 from '../assets/sangkuriang6.jpg';
+import sangkuriang7 from '../assets/sangkuriang7.jpg'; 
 
 const Sangkuriang = () => {
   return (
